@@ -1,0 +1,272 @@
+:root {
+    --primary-color: #C2BCAF;
+    --secondary-color: #A25527;
+    --accent-color: #E5E5E5;
+    --dark-color: #4E331B;
+    --text-color: #333;
+}
+
+body {
+    font-family: 'Lora', serif;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--dark-color);
+    padding: 0.5rem; /* Altura do cabeçalho */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que o cabeçalho se ajuste em telas menores */
+}
+
+header h1 {
+    color: white;
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    display: flex; /* Flex para alinhar a imagem e o texto */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.logo {
+    width: 150px; /* Largura base */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-right: 20px; /* Espaçamento à direita da logo */
+    transform: scale(1.5); /* Aumenta a imagem em 50% */
+    transform-origin: center; /* Mantém o centro da imagem ao aplicar o zoom */
+}
+
+nav {
+    flex-grow: 1; /* Faz o nav crescer e ocupar o espaço disponível */
+    text-align: right; /* Alinha os links à direita */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end; /* Garante que os itens fiquem à direita */
+    gap: 2rem; /* Espaçamento entre os itens */
+    margin: 0; /* Remove a margem */
+    padding: 0; /* Remove o padding */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: 'Lora', serif;
+}
+
+/* Seção Hero */
+.hero {
+    background-color: var(--accent-color);
+    padding: 4rem;
+    text-align: center;
+    position: relative; /* Para posicionamento da imagem */
+}
+
+.hero img {
+    width: 200%; /* Ajuste para caber bem na tela */
+    max-width: 1000px; /* Limita a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Arredondamento das bordas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para um efeito 3D */
+    margin: 2rem 0; /* Espaçamento acima e abaixo da imagem */
+}
+
+.hero h2 {
+    color: var(--dark-color);
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero p {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-family: 'Lora', serif;
+}
+
+.cta-button {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.cta-button:hover {
+    background-color: var(--dark-color);
+}
+
+/* Seção de Produtos */
+.products {
+    padding: 2rem;
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+.products h2 {
+    text-align: center;
+    color: var(--dark-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid var(--accent-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 1rem;
+}
+
+.product-info h3 {
+    color: var(--dark-color);
+    margin-bottom: 0.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.product-info p {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    font-family: 'Lora', serif;
+}
+
+/* Seção Sobre Nós */
+.about {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--accent-color);
+}
+
+.about h2 {
+    color: var(--dark-color);
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.about p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-family: 'Lora', serif;
+}
+
+/* Diminuir a imagem na seção Sobre Nós */
+.about img {
+    width: 65%; /* Ajuste o valor para o tamanho desejado */
+    max-width: 300px; /* Limita a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Se desejar bordas arredondadas */
+
+}
+
+/* Seção de Contato */
+.contact {
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--primary-color);
+}
+
+.contact h2 {
+    color: var(--dark-color);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.contact p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    font-family: 'Lora', serif;
+}
+
+/* Ícones de redes sociais */
+.social-icons {
+    margin-top: 1rem;
+}
+
+.social-icons a {
+    color: var(--dark-color);
+    font-size: 2rem;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--secondary-color);
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Ajuste o tamanho da fonte do título no cabeçalho */
+    }
+
+    .hero h2 {
+        font-size: 2rem; /* Ajuste o tamanho da fonte no título da seção hero */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Ajuste o tamanho da fonte do parágrafo na seção hero */
+    }
+
+    .product-card img {
+        height: 200px; /* Diminuir a altura das imagens dos produtos em telas menores */
+    }
+
+    .contact h2 {
+        font-size: 2rem; /* Ajuste o tamanho da fonte do título da seção de contato */
+    }
+}
+
