@@ -7,23 +7,6 @@
     <link rel="stylesheet" href="css/style.css">  
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Adicione o CSS aqui para ícones de redes sociais */
-        .social-icons {
-            margin-top: 1rem;
-        }
-
-        .social-icons a {
-            color: var(--dark-color);
-            font-size: 3rem; /* Aumente o tamanho do ícone aqui */
-            margin: 0 10px;
-            transition: color 0.3s;
-        }
-
-        .social-icons a:hover {
-            color: var(--secondary-color);
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -34,6 +17,7 @@
             <ul>
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#vestidos">Produtos</a></li>
+                <li><a href="#acessorios">Acessórios</a></li>
                 <li><a href="#about">Sobre Nós</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
@@ -42,8 +26,8 @@
     
     <!-- Seção Principal Hero -->
     <section class="hero" id="hero">
-        <img src="imagens/imagem background.png" alt="">
-        <h2>Leve feito pluma </h2>
+        <img src="imagens/Captura de tela 2024-10-23 194251.png" alt="">
+        <h2>Leve feito pluma</h2>
         <p>Estar na moda é estar bem consigo mesma!</p>
     </section>
 
@@ -52,84 +36,296 @@
         <h2>Vestidos</h2>
         <div class="product-grid" id="vestido-grid">
             <div class="product-card">
-                <img src="imagens/vestido 10.jpg" alt="Vestido 1">
+                <div class="carousel">
+                    <img src="fotosmayaamor/vestido 1 frente.WEBP" alt="Vestido 1" class="carousel-image active">
+                    <img src="fotosmayaamor/vestido 1 lado.WEBP" alt="Vestido 1 - Lado" class="carousel-image">
+                    <img src="fotosmayaamor/vestido 1 costas.WEBP" alt="Vestido 1 - Detalhes" class="carousel-image">
+                    <button class="carousel-button left" onclick="moveSlide(this, -1)">&#10094;</button>
+                    <button class="carousel-button right" onclick="moveSlide(this, 1)">&#10095;</button>
+                </div>
                 <div class="product-info">
                     <h3>Vestido Indiano</h3>
-                    <p>R$156,00</p>
+                    <h5>Encante-se com este vestido leve e fluido, perfeito para dias ensolarados. O toque delicado do floral rosa traz feminilidade, enquanto o corte soltinho oferece conforto e estilo. Ideal para ocasiões descontraídas com um toque romântico.</h5>
+                    <p>De <s>R$160,00</s> por R$130,00</p>
                 </div>
             </div>
             <div class="product-card">
-                <img src="imagens/vestido 21.jpg" alt="Vestido 2">
+                <div class="carousel">
+                    <img src="fotosmayaamor/vestido 2 frente.WEBP" alt="Vestido 2" class="carousel-image active">
+                    <img src="fotosmayaamor/vestido 2 costas.WEBP" alt="Vestido 2 - Detalhes" class="carousel-image">
+                    <button class="carousel-button left" onclick="moveSlide(this, -1)">&#10094;</button>
+                    <button class="carousel-button right" onclick="moveSlide(this, 1)">&#10095;</button>
+                </div>
                 <div class="product-info">
                     <h3>Vestido Tradicional</h3>
-                    <p>R$220,00</p>
+                    <h5>Um clássico moderno! Este vestido longo azul com detalhes em dourado exala elegância. Com sua modelagem fluida e sofisticada, é ideal para eventos mais formais, sem perder o charme e o frescor que o verão pede.</h5>
+                    <p>De <s>R$179,90,00</s> por R$130,00</p>
                 </div>
             </div>
             <div class="product-card">
-                <img src="imagens/Catalogo_aurea_palak_page-0002.jpg" alt="Vestido 3">
+                <div class="carousel">
+                    <img src="fotosmayaamor/vestido 3 frente.WEBP" alt="Vestido 3" class="carousel-image active">
+                    <img src="fotosmayaamor/vestido 3 lado.WEBP" alt="Vestido 3 - Lado" class="carousel-image">
+                    <img src="fotosmayaamor/vestido 3 costas.WEBP" alt="Vestido 3 - Detalhes" class="carousel-image">
+                    <button class="carousel-button left" onclick="moveSlide(this, -1)">&#10094;</button>
+                    <button class="carousel-button right" onclick="moveSlide(this, 1)">&#10095;</button>
+                </div>
                 <div class="product-info">
                     <h3>Vestido Floral</h3>
-                    <p>R$299,00</p>
+                    <h5>Para quem busca conforto sem abrir mão do estilo, este vestido curto em tons de verde e azul é a escolha perfeita. Seu tecido leve e estampa vibrante criam uma combinação única para qualquer ocasião casual.</h5>
+                    <p>De <s>R$180,00</s> por R$130,00</p>
                 </div>
             </div>
             <div class="product-card">
-                <img src="imagens/vestido 11.jpg" alt="Vestido 4">
+                <div class="carousel">
+                    <img src="fotosmayaamor/vestido 4 frente.WEBP" alt="Vestido 4" class="carousel-image active">
+                    <img src="fotosmayaamor/vestido 4 detalhes frente.WEBP" alt="Vestido 4 - Lado" class="carousel-image">
+                    <img src="fotosmayaamor/vestido 4 meio costas.WEBP" alt="Vestido 4 - Lado" class="carousel-image">
+                    <img src="fotosmayaamor/vestido 4 de costas.WEBP" alt="Vestido 4 - Detalhes" class="carousel-image">
+                    <button class="carousel-button left" onclick="moveSlide(this, -1)">&#10094;</button>
+                    <button class="carousel-button right" onclick="moveSlide(this, 1)">&#10095;</button>
+                </div>
                 <div class="product-info">
                     <h3>Vestido Elegante</h3>
+                    <h5>O vestido boho em tons de bege é a união perfeita de estilo e conforto. Com uma pegada descontraída, ele traz o charme dos detalhes minimalistas e uma modelagem que valoriza qualquer silhueta.</h5>
                     <p>R$289,70</p>
                 </div>
             </div>
             <div class="product-card">
-                <img src="imagens/vestido 3.jpg" alt="Vestido 5">
+                <div class="carousel">
+                    <img src="fotosmayaamor/vestido 5 frente.WEBP" alt="Vestido 5" class="carousel-image active">
+                    <img src="fotosmayaamor/vestido 5 detalhes frente.WEBP" alt="Vestido 5 - Lado" class="carousel-image">
+                    <img src="fotosmayaamor/vestido 5 lado.WEBP" alt="Vestido 5 - Detalhes" class="carousel-image">
+                    <img src="fotosmayaamor/vestido 5 costas.WEBP" alt="Vestido 5 - Costas" class="carousel-image">
+                    <button class="carousel-button left" onclick="moveSlide(this, -1)">&#10094;</button>
+                    <button class="carousel-button right" onclick="moveSlide(this, 1)">&#10095;</button>
+                </div>
                 <div class="product-info">
                     <h3>Vestido de Festa</h3>
+                    <h5>Sofisticado e atual, este vestido longo tie-dye em tons suaves é a escolha ideal para quem busca modernidade e leveza. O detalhe no busto valoriza a silhueta, enquanto o tecido fluido acompanha seus movimentos com elegância.</h5>
                     <p>R$299,75</p>
                 </div>
             </div>
             <div class="product-card">
-                <img src="imagens/vestido 4.jpg" alt="Vestido 6">
+                <div class="carousel">
+                    <img src="fotosmayaamor/vestido 6 frente.WEBP" alt="Vestido 6" class="carousel-image active">
+                    <img src="fotosmayaamor/vestido 6 lado.WEBP" alt="Vestido 6 - Lado" class="carousel-image">
+                    <img src="fotosmayaamor/vestido 6 costas.WEBP" alt="Vestido 6 - Detalhes" class="carousel-image">
+                    <button class="carousel-button left" onclick="moveSlide(this, -1)">&#10094;</button>
+                    <button class="carousel-button right" onclick="moveSlide(this, 1)">&#10095;</button>
+                </div>
                 <div class="product-info">
-                    <h3>Vestido de Verão</h3>
-                    <p>R$299,00</p>
+                    <h3>Blusa e Calça Indiana</h3>
+                    <h5>Este conjunto vibrante é perfeito para quem quer um visual alegre e despojado. Com estampa única e modelagem confortável, ele traz o frescor ideal para o verão, sem abrir mão do estilo.</h5>
+                    <p>R$220,00</p>
                 </div>
             </div>
             <div class="product-card">
-                <img src="imagens/vestido 6.jpg" alt="Vestido 7">
+                <div class="carousel">
+                    <img src="fotosmayaamor/macacao 7 frente.WEBP" alt="Vestido 7" class="carousel-image active">
+                    <img src="fotosmayaamor/macacao 7 lado.WEBP" alt="Vestido 7 - Lado" class="carousel-image">
+                    <img src="fotosmayaamor/macacao 7 costas mesmo.WEBP" alt="Vestido 7 - Detalhes" class="carousel-image">
+                    <button class="carousel-button left" onclick="moveSlide(this, -1)">&#10094;</button>
+                    <button class="carousel-button right" onclick="moveSlide(this, 1)">&#10095;</button>
+                </div>
                 <div class="product-info">
-                    <h3>Vestido Midi</h3>
-                    <p>R$239,97</p>
+                    <h3>Macacão</h3>
+                    <h5>ELeve e prático, o macacão estampado em bege é ideal para quem busca um look elegante, mas descomplicado. Com detalhes sutis e alças finas, é perfeito para eventos casuais ou ocasiões especiais.</h5>
+                    <p>De <s>R$350,00</s> por R$280,00</p>
                 </div>
             </div>
             <div class="product-card">
-                <img src="imagens/vestido 7.jpg" alt="Vestido 8">
-                <div class="product-info">
-                    <h3>Vestido Longo</h3>
-                    <p>R$299,99</p>
+                <div class="carousel">
+                    <img src="fotosmayaamor/vestido 8 frente.WEBP" alt="Vestido 7" class="carousel-image active">
+                    <img src="fotosmayaamor/vestido 8 detalhes.WEBP" alt="Vestido 7 - Lado" class="carousel-image">
+                    <img src="fotosmayaamor/vestido 8 costas.WEBP" alt="Vestido 7 - Detalhes" class="carousel-image">
+                    <button class="carousel-button left" onclick="moveSlide(this, -1)">&#10094;</button>
+                    <button class="carousel-button right" onclick="moveSlide(this, 1)">&#10095;</button>
                 </div>
+                <div class="product-info">
+                    <h3>Vestido azul</h3>
+                    <h5>Sinta-se flutuando com este vestido azul claro, que traz leveza e sofisticação em cada movimento. Ideal para dias quentes, sua modelagem solta garante conforto, enquanto a estampa discreta mantém o look atual e charmoso.</h5>
+                    <p>De <s>R$270,00</s> por R$229,90</p>
+                </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="fotosmayaamor/vestido 9 frente.WEBP" alt="Vestido 5" class="carousel-image active">
+                <img src="fotosmayaamor/vestido 9 detalhes.WEBP" alt="Vestido 5 - Lado" class="carousel-image">
+                <img src="fotosmayaamor/vestido 9 lado.WEBP" alt="Vestido 5 - Detalhes" class="carousel-image">
+                <img src="fotosmayaamor/vestido 9 costas.WEBP" alt="Vestido 5 - Costas" class="carousel-image">
+                <button class="carousel-button left" onclick="moveSlide(this, -1)">&#10094;</button>
+                <button class="carousel-button right" onclick="moveSlide(this, 1)">&#10095;</button>
             </div>
-            <div class="product-card">
-                <img src="imagens/vestido 8.jpg" alt="Vestido 9">
-                <div class="product-info">
-                    <h3>Vestido Casual</h3>
-                    <p>R$159,99</p>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="imagens/vestido 9.jpg" alt="Vestido 10">
-                <div class="product-info">
-                    <h3>Vestido Com Estampa</h3>
-                    <p>R$199,99</p>
-                </div>
-            
+            <div class="product-info">
+                <h3>Vestido de Festa</h3>
+                <h5>Um toque boêmio com elegância. Este vestido longo em tons de verde combina perfeitamente o frescor do verão com detalhes delicados em renda. Ideal para festas ao ar livre ou momentos especiais, onde o conforto e o estilo andam juntos.</h5>
+                <p>De <s>R$359,00</s> por R$299,00</p>
             </div>
         </div>
-        
-        <a href="#" class="cta-button" id="loadMoreDresses">Ver Mais Vestidos</a>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="fotosmayaamor/vestido 10 detahes.WEBP" alt="Vestido 6" class="carousel-image active">
+                <img src="fotosmayaamor/vestido 10 costas.WEBP" alt="Vestido 6 - Lado" class="carousel-image">
+                <button class="carousel-button left" onclick="moveSlide(this, -1)">&#10094;</button>
+                <button class="carousel-button right" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="product-info">
+                <h3>Vestido com detalhes </h3>
+                <h5>Leveza e sofisticação definem este vestido branco, com detalhes em babados e amarração frontal. Sua modelagem solta é perfeita para quem busca um look romântico, sem perder o toque de modernidade que as tendências atuais pedem.</h5>
+                <p>De <s>R$369,00</s> por R$299,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="fotosmayaamor/vestido 11 frente.WEBP" alt="Vestido 7" class="carousel-image active">
+                <img src="fotosmayaamor/vestido 11 lado.WEBP" alt="Vestido 7 - Lado" class="carousel-image">
+                <img src="fotosmayaamor/vestido 11 costas.WEBP" alt="Vestido 7 - Detalhes" class="carousel-image">
+                <button class="carousel-button left" onclick="moveSlide(this, -1)">&#10094;</button>
+                <button class="carousel-button right" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="product-info">
+                <h3>Vestido Detalhes Rosas</h3>
+                <h5>Um charme cultural! Este vestido longo com bordados vibrantes combina a simplicidade do branco com a riqueza de detalhes étnicos. Perfeito para um visual descontraído e elegante, inspirado nas tradições indianas.</h5>
+                <p>De <s>R$359,00</s> por R$299,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="fotosmayaamor/vestido 12 frente.WEBP" alt="Vestido 7" class="carousel-image active">
+                <img src="fotosmayaamor/vestido 12 costas.WEBP" alt="Vestido 7 - Detalhes" class="carousel-image">
+                <button class="carousel-button left" onclick="moveSlide(this, -1)">&#10094;</button>
+                <button class="carousel-button right" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="product-info">
+                <h3>Vestido colorido</h3>
+                <h5>Para quem adora peças leves e românticas, este vestido em tons pasteis é a escolha ideal. Com camadas delicadas e uma estampa floral discreta, ele garante um visual doce e encantador, perfeito para passeios ou eventos mais casuais.</h5>
+                <p>R$389,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="fotosmayaamor/vestido 13 frente.WEBP" alt="Vestido 7" class="carousel-image active">
+                <img src="fotosmayaamor/vestido 13 detaaais.WEBP" alt="Vestido 7 - Lado" class="carousel-image">
+                <img src="fotosmayaamor/vestido 13 frente deitada.WEBP" alt="Vestido 7 - Detalhes" class="carousel-image">
+                <button class="carousel-button left" onclick="moveSlide(this, -1)">&#10094;</button>
+                <button class="carousel-button right" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="product-info">
+                <h3>Saída de Praia </h3>
+                <h5>Leveza e sofisticação em um só look. Este conjunto apresenta uma saída fluida em tons de bege e branco, perfeita para um dia de praia ou uma saída casual. O top branco por dentro adiciona um toque clean e minimalista, criando um contraste suave que eleva o estilo da peça. Uma escolha versátil para momentos de lazer com muito estilo.</h5>
+                <p>De <s>R$280,00</s> por R$200,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="fotosmayaamor/vestido 14 frente.WEBP" alt="Vestido 7" class="carousel-image active">
+                <img src="fotosmayaamor/vestido 14 lado.WEBP" alt="Vestido 7 - Lado" class="carousel-image">
+                <img src="fotosmayaamor/vestido 14 costas.WEBP" alt="Vestido 7 - Detalhes" class="carousel-image">
+                <button class="carousel-button left" onclick="moveSlide(this, -1)">&#10094;</button>
+                <button class="carousel-button right" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="product-info">
+                <h3>Vestido Azul e Verde</h3>
+                <h5>Um toque de frescor e delicadeza para o seu guarda-roupa! Este vestido em tons suaves de azul e verde claros traz uma vibe leve e relaxante, perfeito para dias ensolarados. Com uma modelagem fluida e detalhes sutis, ele proporciona conforto e elegância em qualquer ocasião. Ideal para quem ama um look descomplicado, mas cheio de charme.</h5>
+                <p>De <s>R$270,00</s> por R$200,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="fotosmayaamor/vestido 15 frente.WEBP" alt="Vestido 7" class="carousel-image active">
+                <img src="fotosmayaamor/vestido 15 lado.WEBP" alt="Vestido 7 - Lado" class="carousel-image">
+                <img src="fotosmayaamor/vestido 15 costas.WEBP" alt="Vestido 7 - Detalhes" class="carousel-image">
+                <button class="carousel-button left" onclick="moveSlide(this, -1)">&#10094;</button>
+                <button class="carousel-button right" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            
+            <div class="product-info">
+                <h3>Vestido Sereia</h3>
+                <h5>Esse lindo vestido se adapta a diversos tamanhos de manequim, visando a sensação de se sentir confortável, estilosa e bem consigo mesma. Detalhes em fios de lurex que dão um toque especial e charmoso ao vestido.</h5>
+                <p>De <s>R$339,00</s> por R$299,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="fotosmayaamor/vestido 16 frente.WEBP" alt="Vestido 7" class="carousel-image active">
+                <img src="fotosmayaamor/vestido 16 detalhes.WEBP" alt="Vestido 7 - Lado" class="carousel-image">
+                <img src="fotosmayaamor/vestido 16 costas.WEBP" alt="Vestido 7 - Detalhes" class="carousel-image">
+                <button class="carousel-button left" onclick="moveSlide(this, -1)">&#10094;</button>
+                <button class="carousel-button right" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="product-info">
+                <h3>Vestido Tradicional</h3>
+                <h5 class="description">Clássico e atemporal, este vestido em bege e branco é sinônimo de elegância discreta. Sua silhueta tradicional valoriza o corpo com suavidade, enquanto a combinação dos tons neutros cria um visual sofisticado e fácil de combinar. Ideal para eventos que pedem uma presença refinada, mantendo sempre o conforto e a leveza.</h5>
+                <p>De <s>R$269,00</s> por R$220,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="fotosmayaamor/vestido 17 frente.WEBP" alt="Vestido 7" class="carousel-image active">
+                <img src="fotosmayaamor/vestido 17 mais longe.WEBP" alt="Vestido 7 - Lado" class="carousel-image">
+                <img src="fotosmayaamor/vestido 17 costas.WEBP" alt="Vestido 7 - Detalhes" class="carousel-image">
+                <button class="carousel-button left" onclick="moveSlide(this, -1)">&#10094;</button>
+                <button class="carousel-button right" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="product-info">
+                <h3>Vestido Degradê</h3>
+                <h5>Romântico e encantador, este vestido combina delicados tons de verde claro e rosa claro, realçados por detalhes dourados que trazem um brilho sutil e sofisticado. A leveza do tecido e o design fluido garantem movimento e conforto, tornando-o a escolha perfeita para ocasiões que pedem um toque especial de feminilidade e elegância.</h5>
+                <p>De <s>R$270,00</s> por R$200,00</p>
+            </div>
+            <div>
+                
     </section>
-
+    <!-- Seção de Vestidos Curtos -->
+<section class="short-dresses">
+    <h2>Vestidos Curtos</h2>
+    <div class="product-grid">
+        <div class="product-card">
+            <div class="carousel">
+                <img src="fotosmayaamor/vestido curto 1.jpeg" alt="Vestido Curto 1" class="carousel-image active">
+            </div>
+            <div class="product-info">
+                <h3>Vestido Curto Degradê</h3>
+                <h5>Este vestido curto apresenta um deslumbrante efeito degradê, que combina tons harmoniosos, proporcionando um visual vibrante e sofisticado para qualquer ocasião.</h5>
+                <p>De <s>R$230,00</s> por R$99,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="fotosmayaamor/vestido curto 2.jpeg" alt="Vestido Curto 2" class="carousel-image active">
+            
+            </div>
+            <div class="product-info">
+                <h3>Vestido Marsala</h3>
+                <h5>Com um rico tom marsala, este vestido exala elegância atemporal, ideal para quem busca um estilo marcante e refinado, perfeito para festas e eventos especiais.</h5>
+                <p>De <s>R$120,00</s> por R$89,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="fotosmayaamor/vestido curto 3.jpeg" alt="Vestido Curto 3" class="carousel-image active">
+            </div>
+            <div class="product-info">
+                <h3>Vestido Renda Branca </h3>
+                <h5>Este vestido de renda branca traz um toque romântico e delicado, ideal para ocasiões que pedem um ar de suavidade e charme, destacando a beleza feminina.</h5>
+                <p>De <s>R$159,00</s> por R$100,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="fotosmayaamor/vestido curto 4.jpeg" alt="Vestido Curto 4" class="carousel-image active">
+            </div>
+            <div class="product-info">
+                <h3>Vestido Mullet </h3>
+                <h5>Com seu corte assimétrico e fluido, o vestido mullet oferece um toque contemporâneo e ousado, permitindo liberdade de movimento enquanto mantém a elegância inigualável.</h5>
+                <p>De <s>R$159,00</s> por R$130,00</p>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- Seção de Produtos - Anéis -->
     <section class="products" id="aneis">
-        <h2>Anéis</h2>
+        <h2>Pratas 925</h2>
         <div class="product-grid" id="anel-grid">
             <div class="product-card">
                 <img src="imagens/anel 1.jpeg" alt="Anel 1">
@@ -162,7 +358,7 @@
             <div class="product-card">
                 <img src="imagens/anel 6.jpeg" alt="Anel 6">
                 <div class="product-info">
-                    <h3>Anel de Esmalt</h3>
+                    <h3>Anel Coroa</h3>
                     <p>R$50,00</p>
                 </div>
             </div>
@@ -176,7 +372,7 @@
             <div class="product-card">
                 <img src="imagens/anel 8.jpeg" alt="Anel 8">
                 <div class="product-info">
-                    <h3>Anel Falange Fundo do Mae</h3>
+                    <h3>Anel Falange Fundo do Mar</h3>
                     <p>R$39,60</p>
                 </div>
             </div>
@@ -190,50 +386,617 @@
             <div class="product-card">
                 <img src="imagens/anel 10.jpeg" alt="Anel 10">
                 <div class="product-info">
-                    <h3>Anel Preço</h3>
+                    <h3>Anel Prego</h3>
                     <p>R$85,60</p>
                 </div>
             </div>
             <div class="product-card">
                 <img src="imagens/anel 11.jpeg" alt="Anel 11">
                 <div class="product-info">
-                    <h3>Anel Estrela</h3>
+                    <h3>Anel Trevo</h3>
                     <p>R$51,00</p>
                 </div>
             </div>
             <div class="product-card">
                 <img src="imagens/anel 12.jpeg" alt="Anel 12">
                 <div class="product-info">
-                    <h3>Anel Preço</h3>
+                    <h3>Anel Pedra Natural Quatzo</h3>
+                    <p>R$115,40</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/anel 02.jpeg" alt="Anel 3">
+                <div class="product-info">
+                    <h3>Prata indiana 925 com pedra da lua</h3>
+                    <p>R$199,80</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/anel 03.jpeg" alt="Anel 4">
+                <div class="product-info">
+                    <h3>Cravejado na zircônia</h3>
+                    <p>R$50,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/anel 04.jpeg" alt="Anel 5">
+                <div class="product-info">
+                    <h3>Anel quadrado cravejado em zircônia com corações vazados</h3>
+                    <p>R$45,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/anel 05.jpeg" alt="Anel 6">
+                <div class="product-info">
+                    <h3>Cravejado na zircônia</h3>
+                    <p>R$165,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/anel 06.jpeg" alt="Anel 7">
+                <div class="product-info">
+                    <h3> Anel Triângulo vazado</h3>
+                    <p>R$60,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/anel 07.jpeg" alt="Anel 8">
+                <div class="product-info">
+                    <h3>Anel 7 chakras</h3>
+                    <p>R$85,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/anel 08.jpeg" alt="Anel 9">
+                <div class="product-info">
+                    <h3>Anel São Bento </h3>
+                    <p>R$125,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/anel 09.jpeg" alt="Anel 10">
+                <div class="product-info">
+                    <h3>Anel Cruz</h3>
+                    <p>R$90,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/berloques 1.jpeg" alt="Anel 11">
+                <div class="product-info">
+                    <h3>Brincos Variados na Prata 925 Indiana e Italiana com pedras naturais</h3>
+                    <p>Consultar uma de nossas vendedoras</p>
+        
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/berloques 2.jpeg" alt="Anel 12">
+                <div class="product-info">
+                    <h3>Berloques</h3>
+                    <p>A partir de R$25</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/brinco 1.jpeg" alt="Anel 8">
+                <div class="product-info">
+                    <h3>Trio Argolinhas Cravejadas em zircônia</h3>
+                    <p>R$179,80</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/brincos 2.jpeg" alt="Anel 9">
+                <div class="product-info">
+                    <h3>Trio Zircônia</h3>
+                    <p>R$51,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/brincos 3.jpeg" alt="Anel 10">
+                <div class="product-info">
+                    <h3>Argolas</h3>
+                    <p>A partir de R$25,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/brincos 4.jpeg" alt="Anel 11">
+                <div class="product-info">
+                    <h3>Argolas</h3>
+                    <p>A partir de R$25,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/colar 1.jpeg" alt="Anel 12">
+                <div class="product-info">
+                    <h3>Conjuto Ponto de Luz</h3>
+                    <p>R$135,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/colares 1.jpeg" alt="Anel 11">
+                <div class="product-info">
+                    <h3>Correntes femininas e masculinas</h3>
+                    <p>A partir de R$40,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/colares 2.jpeg" alt="Anel 12">
+                <div class="product-info">
+                    <h3>Conjunto Trevo cravejado na zircônia</h3>
+                    <p>R$280,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/pulseira 1.jpeg" alt="Anel 11">
+                <div class="product-info">
+                    <h3>Tornozeleria Indiana</h3>
+                    <p>R$340,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/pulseira 2.jpeg" alt="Anel 12">
+                <div class="product-info">
+                    <h3>Tornozeleria Olho Grego contra inveja ( Prata Italiana) </h3>
+                    <p>R$70,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/pulseira 3.jpeg" alt="Anel 11">
+                <div class="product-info">
+                    <h3>Tornozeleria com Cristais</h3>
+                    <p>R$40,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/pulseira 4.jpeg" alt="Anel 12">
+                <div class="product-info">
+                    <h3>Tornozeleria Indiana pedra natural Olho de Tigre </h3>
+                    <p>R$524,70</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/pulseira 5.jpeg" alt="Anel 11">
+                <div class="product-info">
+                    <h3>Pulseira indiana com pedra natural QUARTZO ROSA </h3>
+                    <p>R$235,20</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/pulseira 6.jpeg" alt="Anel 12">
+                <div class="product-info">
+                    <h3>Pulseira italiana DOIS LADOS com pedras naturais</h3>
                     <p>R$85,60</p>
                 </div>
             </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/pulseira 7.jpeg" alt="Anel 11">
+                <div class="product-info">
+                    <h3>Pulseira italiana DOIS LADOS com pedras naturais</h3>
+                    <p>R$85,60</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/pulseira 8.jpeg" alt="Anel 12">
+                <div class="product-info">
+                    <h3>Tornozeleira italiana com cristais</h3>
+                    <p>R$40,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/pulseira 9.jpeg" alt="Anel 11">
+                <div class="product-info">
+                    <h3>Pulseira Berloques cravejadas na zircônia <hr>
+                    A partir de R$230,00</h3>
+                    <p>Consultar uma das nossas vendedoras</p>
+                </div>       
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/PIGENTE 1.jpeg" alt="Anel 3">
+                <div class="product-info">
+                    <h3>Pigente Indiano com Pedra Natural/</h3>
+                    <p>R$85,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/pingete 2.jpeg" alt="Anel 3">
+                <div class="product-info">
+                    <h3>Pigente Prata Indiana com pedra natural Quartzo Rosa</h3>
+                    <p>R$100,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/pigente 3.jpeg" alt="Anel 3">
+                <div class="product-info">
+                    <h3>Pigente Coração</h3>
+                    <p>R$55,20</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/pingente 4.jpeg" alt="Anel 3">
+                <div class="product-info">
+                    <h3>Pigente Cruz</h3>
+                    <p>R$20,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/pigente 10.jpeg" alt="Anel 3">
+                <div class="product-info">
+                    <h3>Ponto de Luz </h3>
+                    <p>R$19,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/pigente 6.jpeg" alt="Anel 3">
+                <div class="product-info">
+                    <h3> Colares </h3>
+                    <p>Montamos combinações à preferir 
+                        (consultar uma de nossas vendedoras)
+                    </p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/pigente 7.jpeg" alt="Anel 3">
+                <div class="product-info">
+                    <h3>Pigente Lua</h3>
+                    <p>R$39,90</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/pigente 8.jpeg" alt="Anel 3">
+                <div class="product-info">
+                    <h3>Pigente Cravejado</h3>
+                    <p>R$35,00</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="pulseiras, berloques/pigente 9.jpeg" alt="Anel 3">
+                <div class="product-info">
+                    <h3>Pigente Cravejado Zircônia</h3>
+                    <p>R$35,00</p>
+                </div>
         </div>
-        <a href="#" class="cta-button" id="loadMoreAneis">Ver Mais Anéis</a>
+        <div class="product-card">
+            <img src="pulseiras, berloques/pigente 11.jpeg" alt="Anel 3">
+            <div class="product-info">
+                <h3>Pigente Filha Cravejado</h3>
+                <p>R$25,00</p>
+            </div>
+    </div>
+    <div class="product-card">
+        <img src="pulseiras, berloques/pigente 10.jpeg" alt="Anel 3">
+        <div class="product-info">
+            <h3>Ponto de Luz</h3>
+            <p>R$19,90</p>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="pulseiras, berloques/pigente 12.jpeg" alt="Anel 3">
+        <div class="product-info">
+            <h3>Pigente Meditação </h3>
+            <p>R$75,00 </p>
+        </div>
+</div>
+<div class="product-card">
+    <img src="pulseiras, berloques/pigente 13.jpeg" alt="Anel 3">
+    <div class="product-info">
+        <h3>Pigente Nossa Senhora</h3>
+        <p>R$35,00</p>
+    </div>
+</div>
+<div class="product-card">
+    <img src="pulseiras, berloques/pigente 14.jpeg" alt="Anel 3">
+    <div class="product-info">
+        <h3>Pigente Espelho</h3>
+        <p>R$47,00</p>
+    </div>
+</div>
+<div class="product-card">
+    <img src="pulseiras, berloques/pigente 15.jpeg" alt="Anel 3">
+    <div class="product-info">
+        <h3>Pigente Filho </h3>
+        <p>R$75,00 </p>
+    </div>
+</div>
+<div class="product-card">
+    <img src="pulseiras, berloques/pigente 16.jpeg" alt="Anel 3">
+    <div class="product-info">
+        <h3>Pigente Pai Nosso</h3>
+        <p>R$60,00</p>
+    </div>
+</div>
+<div class="product-card">
+    <img src="pulseiras, berloques/pigente 17.jpeg" alt="Anel 3">
+    <div class="product-info">
+        <h3>Pigente Cruz</h3>
+        <p>R$60,00</p>
+    </div>
+</div>
+
+        
     </section>
+<!-- Seção de Produtos - Batas Indianas -->
+<section class="products" id="batas">
+    <h2>Batas e Camisas Indianas</h2>
+    <div class="product-grid" id="bata-grid">
+        <div class="product-card">
+            <div class="carousel">
+                <img src="batas/camiseta 1.jpeg" alt="Bata 1" class="carousel-image active">
+            </div>
+            <div class="product-info">
+                <h3>Bata Infantil</h3>
+                <p>De <s>R$85,00</s> por R$60,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="batas/camiseta 2.jpeg" alt="Bata 2" class="carousel-image active">
+            </div>
+            <div class="product-info">
+                <h3>Bata Elegante</h3>
+                <p>De <s>R$85,00</s> por R$60,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="batas/camiseta 3.jpeg" alt="Bata 3" class="carousel-image active">
+            </div>
+            <div class="product-info">
+                <h3>Bata Casual</h3>
+               <p>De <s>R$85,00</s> por R$60,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="batas/camiseta 4.jpeg" alt="Bata 2" class="carousel-image active">
+            </div>
+            <div class="product-info">
+                <h3>Bata Floral</h3>
+                <p>De <s>R$85,00</s> por R$60,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="batas/camiseta 5.jpeg" alt="Bata 2" class="carousel-image active">
+            </div>
+            <div class="product-info">
+                <h3>Bata Indiana </h3>
+                <p>De <s>R$85,00</s> por R$60,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="batas/camiseta 6.jpeg" alt="Bata 2" class="carousel-image active">
+            </div>
+            <div class="product-info">
+                <h3>Bata Sol e Lua</h3>
+                <p>De <s>R$85,00</s> por R$60,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="batas/camiseta 7.jpeg" alt="Bata 2" class="carousel-image active">
+            </div>
+            <div class="product-info">
+                <h3>Bata Pirâmide </h3>
+                <p>De <s>R$85,00</s> por R$60,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="batas/camiseta 8.jpeg" alt="Bata 2" class="carousel-image active">
+            </div>
+            <div class="product-info">
+                <h3>Bata Floral</h3>
+                <p>De <s>R$85,00</s> por R$60,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="batas/camiseta 9.jpeg" alt="Bata 2" class="carousel-image active">
+            </div>
+            <div class="product-info">
+                <h3>Bata Elefante </h3>
+                <p>De <s>R$85,00</s> por R$60,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="batas/camiseta 10.jpeg" alt="Bata 2" class="carousel-image active">
+            </div>
+            <div class="product-info">
+                <h3>Bata Yin and yang</h3>
+                <p>De <s>R$85,00</s> por R$60,00</p>
+        </div>
+    </div>
+    <div class="product-card">
+        <div class="carousel">
+            <img src="batas/bata 1.jpeg" alt="Bata 2" class="carousel-image active">
+        </div>
+        <div class="product-info">
+            <h3>Bata Indiana </h3>
+            <p>De <s>R$120,00</s> por R$99,00</p>
+    </div>
+</div>
+<div class="product-card">
+    <div class="carousel">
+        <img src="batas/bata 2.jpeg" alt="Bata 2" class="carousel-image active">
+    </div>
+    <div class="product-info">
+        <h3>Bata Indiana </h3>
+        <p>De <s>R$120,00</s> por R$99,00</p>
+</div>
+</div>
+<div class="product-card">
+    <div class="carousel">
+        <img src="batas/bata 3.jpeg" alt="Bata 2" class="carousel-image active">
+    </div>
+    <div class="product-info">
+        <h3>Bata Indiana </h3>
+        <p>De <s>R$120,00</s> por R$99,00</p>
+</div>
+
+</section>
+<!-- Seção de Produtos - Bolsas e Capas de Almofadas -->
+<section class="products" id="acessorios">
+    <h2>Acessórios</h2>
+    <div class="product-grid" id="bolsa-grid">
+        <div class="product-card">
+            <div class="carousel">
+                <img src="bolsas e capa de almofaba/bolsa colorida frente.jpeg" alt="Bolsa 1" class="carousel-image active">
+                <img src="bolsas e capa de almofaba/bolsa colorida aberta.jpeg" alt="Bolsa 1 - Lado" class="carousel-image">
+                <button class="carousel-button left" onclick="moveSlide(this, -1)">&#10094;</button>
+                <button class="carousel-button right" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="product-info">
+                <h3>Bolsa Quadrada</h3>
+                <p>De <s>R$170,00</s> por R$140,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="bolsas e capa de almofaba/bolsa marrom frente.jpeg" alt="Bolsa 2" class="carousel-image active">
+                <img src="bolsas e capa de almofaba/detalhes bolsa marrom.jpeg" alt="Bolsa 2 - Lado" class="carousel-image">
+                <button class="carousel-button left" onclick="moveSlide(this, -1)">&#10094;</button>
+                <button class="carousel-button right" onclick="moveSlide(this, 1)">&#10095;</button>
+            </div>
+            <div class="product-info">
+                <h3>Bolsa de Tecido</h3>
+                <p>De <s>R$170,00</s> por R$140,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="batas/bolsa 01.jpeg" alt="Capa de Almofada 1" class="carousel-image active">
+
+            </div>
+            <div class="product-info">
+                <h3>Bolsa de Saco</h3>
+                <p>De <s>R$150,00</s> por R$110,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="batas/bolsa 02.jpeg" alt="Capa de Almofada 1" class="carousel-image active">
+
+            </div>
+            <div class="product-info">
+                <h3>Bolsa Indiana Alça </h3>
+                <p>De <s>R$150,00</s> por R$120,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="batas/bolsa 03.jpeg" alt="Capa de Almofada 1" class="carousel-image active">
+
+            </div>
+            <div class="product-info">
+                <h3>Bolsa Patch Work</h3>
+                <p>De <s>R$230,00</s> por R$180,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="bolsas e capa de almofaba/almofaba 1 rosa.jpeg" alt="Capa de Almofada 1" class="carousel-image active">
+
+            </div>
+            <div class="product-info">
+                <h3>Capa de Almofada Floral</h3>
+                <p>De <s>R$85,00</s> por R$60,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="bolsas e capa de almofaba/almofaba 2 verde.jpeg" alt="Capa de Almofada 2" class="carousel-image active">
+            </div>
+            <div class="product-info">
+                <h3>Capa de Almofada Geométrica</h3>
+                <p>De <s>R$85,00</s> por R$60,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="bolsas e capa de almofaba/almofada 3 amarela.jpeg" alt="Capa de Almofada 2" class="carousel-image active">
+            </div>
+            <div class="product-info">
+                <h3>Capa de Almofada Geométrica</h3>
+                <p>De <s>R$85,00</s> por R$60,00</p>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="batas/inceso 1.jpeg" alt="Capa de Almofada 2" class="carousel-image active">
+            </div>
+            <div class="product-info">
+                <h3>Incensário Simples Madeira</h3>
+                <p>De <s>R$17,00</s> por R$60,00</p>
+            </div>
+            <div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="batas/porta incenso real.jpeg" alt="Capa de Almofada 2" class="carousel-image active">
+            </div>
+            <div class="product-info">
+                <h3>Incenso Luxo Madeira</h3>
+                <p>R$80,00</p>
+            </div>
+            <div>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="carousel">
+                <img src="batas/bolsa 04.jpeg" alt="Capa de Almofada 2" class="carousel-image active">
+            </div>
+            <div class="product-info">
+                <h3>Painel de macramê <p>
+                </p>
+                    (sob encomenda, modelos e cores variadas)</h3>
+                <p>Painel de Macramê R$ 155,00</p>
+                <p>Bhuda R$85,00</p>
+            </div>
+            </div>
+            </div>
+        
+            
+</section>
 
     <!-- Seção Sobre -->
     <section class="about" id="about">
         <h2>Sobre Nós</h2>
-        <p>Maya Mor é um projeto desenvolvido com muito amor para quem presa pelo bem estar, leveza, modernidade e conforto. 
-            Aquele espaço onde por instantes te faz conectar com a naturalidade e beleza singela, forte e ao mesmo tempo emocionante, misto de sensações no mesmo ambiente.
-            Estamos muito felizes em te receber aqui.
-            Venha tomar um chá com a gente em Terezópolis ou sentir de perto nosso carinho com nossos envios…〽️✨</p>
-            <img src="imagens/Assinatura SecundÃ¡ria - Off White.png" alt="">
+        <p>Na MODA MOOR, oferecemos uma seleção única de vestidos indianos que combinam tradição e modernidade. Cada peça é cuidadosamente escolhida para atender ao gosto dos nossos clientes, garantindo qualidade e estilo.</p>
+        <img src="imagens/Assinatura SecundÃ¡ria - Off White.png" alt="">
     </section>
 
-    <!-- Seção Contato -->
+    <!-- Seção de Contato -->
     <section class="contact" id="contact">
-        <h2>Entre em Contato</h2>
-        <p>Entre em contato conosco para mais informações sobre nossos produtos ou qualquer dúvida que você tenha.</p>
+        <h2>Contato</h2>
+        <p>Entre em contato conosco!</p>
         <div class="social-icons">
-            <a href="https://wa.me/21972806306" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://wa.me/021972806306" target="_blank"><i class="fab fa-whatsapp"></i></a>
             <a href="https://www.instagram.com/mmormaya" target="_blank"><i class="fab fa-instagram"></i></a>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 MAYA MOR. Todos os direitos reservados.</p>
+        <p>&copy; 2024 MODA MOOR. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        function moveSlide(button, direction) {
+            const carousel = button.parentElement;
+            const images = carousel.querySelectorAll('.carousel-image');
+            let currentIndex = Array.from(images).findIndex(img => img.classList.contains('active'));
+
+            // Remove a classe 'active' da imagem atual
+            images[currentIndex].classList.remove('active');
+
+            // Calcula o novo índice
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = images.length - 1; // Volta para a última imagem se estiver no início
+            if (currentIndex >= images.length) currentIndex = 0; // Volta para a primeira imagem se estiver no final
+
+            // Adiciona a classe 'active' na nova imagem
+            images[currentIndex].classList.add('active');
+        }
+    </script>
 </body>
 </html>
