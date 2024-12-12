@@ -370,3 +370,34 @@ footer {
     font-size: 0.9rem;
   }
 }
+
+/* Banner de Promoção */
+.promo-banner {
+  background: linear-gradient(90deg, #A25527, #4E331B); /* Gradiente de cores terrosas */
+  color: #E5E5E5; /* Texto claro */
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  padding: 20px 10px;
+  margin: 20px auto 0; /* Espaço abaixo do menu */
+  border-radius: 12px; /* Cantos arredondados */
+  max-width: 800px; /* Largura máxima */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+  position: relative; /* Para ajustar o posicionamento */
+}
+
+/* Texto do banner */
+.promo-banner p {
+  margin: 5px 0;
+  font-size: 20px; /* Tamanho do texto */
+}
+
+.promo-banner p:first-child {
+  font-size: 26px; /* Texto maior para destaque */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra no texto */
+}
+
+/* Espaçamento para posicionar abaixo do menu */
+.menu + .promo-banner {
+  margin-top: 20px;
+}
